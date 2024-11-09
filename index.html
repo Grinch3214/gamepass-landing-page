@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>page</title>
+</head>
+
+<body>
+	<header class="header">
+		<nav id="navigation" class="header__nav">
+			<div class="header__navbar">
+				<div class="header__navigation">
+					<a class="header__logo" href="#">
+						<img src="/src/img/logo.svg" alt="boosteroid logo">
+						<img src="/src/img/logo_mini.svg" width="49" height="30" alt="boosteroid logo mini">
+					</a>
+					<ul class="header__list">
+						<li class="header__item">
+							<a href="#" class="header__item-link header__item-link--md i18nelement">downloads</a>
+							<a href="#" class="header__item-link header__item-link--sm i18nelement">our app</a>
+						</li>
+						<li class="header__item">
+							<a href="#" class="header__item-link i18nelement">faq</a>
+						</li>
+						<li class="header__item">
+							<a href="https://help.boosteroid.com/en/" class="header__item-link header__item-link--help i18nelement"
+								target="_blank">Help center</a>
+						</li>
+						<li class="header__item">
+							<a href="https://boosteroid.com/blog/" class="header__item-link header__item-link--blog i18nelement"
+								target="_blank">Blog</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="header__buttons">
+					<a href="https://cloud.boosteroid.com" target="_blank" class="header__buttons-login second-btn ">Sign In</a>
+				</div>
+				<div class="burger">
+					<span></span>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="hero">
+			<div class="container">
+				<div class="hero__box boost__box">
+					<h2 class="boost__box-brand">BOOST</h2>
+					<h1 class="boost__box-title"><span>your</span> pc game pass!</h1>
+					<p class="boost__box-desc">Claim 1 month of PC Game Pass with your Boosteroid subscription</p>
+
+					<div class="boost__box-inner">
+						<h2 class="boost__box-inner-title">You still have</h2>
+						<div class="boost__box-inner-countdown countdown"></div>
+					</div>
+
+					<div class="boost__box-buttons">
+						<a class="boost__box-btn brand-btn" href="#">get code</a>
+						<a class="boost__box-link brand-link" href="#">i have code</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
