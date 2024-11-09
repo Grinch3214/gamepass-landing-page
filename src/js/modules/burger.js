@@ -1,4 +1,4 @@
-export default function burgerMenu() {
+export function burgerMenu() {
 	const burger = document.querySelector('.burger');
 	const navigation = document.getElementById('navigation');
 	const links = document.querySelectorAll('.header__item-link');

@@ -7,5 +7,12 @@ function animationNavbar() {
 	}, 150)
 };
 
+function addFilterClass() {
+	window.addEventListener('scroll', () => {
+		const navigation = document.getElementById('navigation');
+		navigation.classList.toggle('filter', window.scrollY >= 80);
+	});
+}
 
-export { animationNavbar };
+
+export { animationNavbar, addFilterClass };

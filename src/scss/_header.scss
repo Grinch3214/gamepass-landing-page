@@ -6,6 +6,7 @@
   right: 0;
   left: 0;
   top: 0;
+  z-index: 10;
 
   // &__nav {} This class is placed at the bottom
 
@@ -263,6 +264,9 @@
   padding: 0 20px;
   transition: all 0.3s ease;
 
+  &.filter {
+    backdrop-filter: blur(10px);
+  }
   @media (min-width: $breakpoint768) {
     padding: 0 30px;
   }

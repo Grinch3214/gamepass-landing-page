@@ -20,6 +20,13 @@ body {
 
 main {
   padding-top: 80px;
+  @media (min-width: $breakpoint768) {
+    padding-top: 0;
+  }
+}
+
+.top-section {
+  background: url("/src/img/header_bg.svg") no-repeat center/100% 100%;
 }
 
 .container {
