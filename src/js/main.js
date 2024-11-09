@@ -1,8 +1,8 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
 import { animationNavbar, addFilterClass } from './modules/header.js';
 import { burgerMenu } from './modules/burger.js';
 import { startCountdown } from './modules/countdown.js';
-import { marquee } from './modules/marquee.js'
+import { marquee } from './modules/marquee.js';
 
 animationNavbar();
 addFilterClass();
