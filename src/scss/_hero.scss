@@ -12,6 +12,13 @@
     background-size: 100% 130%;
   }
 
+  @media (min-width: $breakpoint1310) {
+    padding: 100px 0 60px;
+  }
+
+  @media (min-width: $breakpoint1920) {
+  }
+
   &__container {
     margin: auto !important;
   }
@@ -42,12 +49,21 @@
       font-size: 80px;
       line-height: 1;
     }
+    @media (min-width: $breakpoint1310) {
+      font-size: 100px;
+    }
+    @media (min-width: $breakpoint1920) {
+      font-size: 170px;
+    }
   }
 
   &__box-title {
     margin-top: -16px;
     @media (min-width: $breakpoint768) {
       margin-top: -25px;
+    }
+    @media (min-width: $breakpoint1310) {
+      margin-top: -30px;
     }
   }
 
@@ -60,10 +76,22 @@
       margin-top: 17px;
       font-size: 14px;
     }
+    @media (min-width: $breakpoint1310) {
+      font-size: 16px;
+    }
+    @media (min-width: $breakpoint1920) {
+      font-size: 24px;
+    }
   }
 
   &__box-inner {
     margin-top: 50px;
+    @media (min-width: $breakpoint1310) {
+      margin-top: 35px;
+    }
+    @media (min-width: $breakpoint1920) {
+      margin-top: 50px;
+    }
   }
 
   &__box-inner-title {
@@ -73,10 +101,16 @@
     @media (min-width: $breakpoint768) {
       font-size: 18px;
     }
+    @media (min-width: $breakpoint1920) {
+      font-size: 30px;
+    }
   }
 
   &__box-inner-countdown {
     margin-top: 10px;
+    @media (min-width: $breakpoint1920) {
+      margin-top: 20px;
+    }
   }
 
   &__box-buttons {
@@ -85,6 +119,12 @@
     align-items: center;
     gap: 20px;
     margin-top: 50px;
+    @media (min-width: $breakpoint1310) {
+      margin-top: 25px;
+    }
+    @media (min-width: $breakpoint1920) {
+      margin-top: 50px;
+    }
   }
 
   &__box-btn {
@@ -111,12 +151,19 @@
     @media (min-width: $breakpoint768) {
       font-size: 60px;
     }
+    @media (min-width: $breakpoint1920) {
+      font-size: 100px;
+      line-height: 60px;
+    }
 
     p + span {
       font-size: 7px;
       color: $sub-color;
       @media (min-width: $breakpoint768) {
         font-size: 12px;
+      }
+      @media (min-width: $breakpoint1920) {
+        font-size: 16px;
       }
     }
   }

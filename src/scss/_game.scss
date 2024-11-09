@@ -1,0 +1,71 @@
+.game {
+  padding-top: 70px;
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+    @media (min-width: $breakpoint768) {
+      margin-bottom: 40px;
+    }
+    @media (min-width: $breakpoint1310) {
+      margin-bottom: 50px;
+    }
+    @media (min-width: $breakpoint1920) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    @media (min-width: $breakpoint768) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    @media (min-width: $breakpoint1310) {
+      gap: 70px;
+    }
+    @media (min-width: $breakpoint1920) {
+      gap: 60px;
+    }
+  }
+
+  &__card {
+    text-align: center;
+  }
+
+  &__card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    @media (min-width: $breakpoint1310) {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 50px;
+    }
+    @media (min-width: $breakpoint1920) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__card-title {
+    font-size: 11px;
+    max-width: 120px;
+    margin: 0 auto;
+    @media (min-width: $breakpoint768) {
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 170px;
+    }
+    @media (min-width: $breakpoint1310) {
+      font-size: 18px;
+      line-height: 20px;
+      max-width: 100%;
+    }
+    @media (min-width: $breakpoint1920) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
