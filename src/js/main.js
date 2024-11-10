@@ -5,6 +5,7 @@ import { startCountdown } from './modules/countdown.js';
 import { marquee } from './modules/marquee.js';
 import { footerAccordionOnMobile } from './modules/footer.js';
 import { accordionTabs } from './modules/tabs.js';
+import { setYearOnFooter } from './modules/footerYear.js'
 
 let mask = document.querySelector('.mask');
 
@@ -14,6 +15,7 @@ function initializeModules() {
 		animationNavbar();
 		addFilterClass();
 		burgerMenu();
+		setYearOnFooter();
 		startCountdown();
 		marquee('.marquee__first', 0.155, 'left');
 		marquee('.marquee__second', 0.155, 'right');
