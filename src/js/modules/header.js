@@ -4,7 +4,7 @@ function animationNavbar() {
 	let anim = setTimeout(function () {
 		navbar.classList.add('active');
 		clearTimeout(anim);
-	}, 150)
+	}, 650)
 };
 
 function addFilterClass() {
