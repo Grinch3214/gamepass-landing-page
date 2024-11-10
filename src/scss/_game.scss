@@ -1,5 +1,12 @@
 .game {
+  background: url("../img/star_top.svg") no-repeat top/100% auto;
   padding-top: 70px;
+  @media (min-width: $breakpoint1310) {
+    padding-top: 90px;
+  }
+  @media (min-width: $breakpoint1920) {
+    padding-top: 150px;
+  }
   &__title {
     text-align: center;
     margin-bottom: 30px;
