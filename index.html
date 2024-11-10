@@ -8,10 +8,79 @@
 	<link rel="icon" sizes="32x32" href="/favicon-2.png" type="image/png">
 	<link rel="icon" sizes="16x16" href="/favicon-1.png" type="image/png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		.mask {
+			width: 100%;
+			height: 100%;
+			background: rgba(11, 0, 41, 1);
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 150;
+			transition: 0.6s ease;
+			overflow: hidden;
+		}
+
+		.mask.hide {
+			opacity: 0;
+		}
+
+		.mask__loader {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: transparent;
+		}
+
+		.mask__loader::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 4px;
+			background: linear-gradient(-90deg,
+					rgba(159, 18, 136, 1) 0%,
+					rgba(33, 1, 156, 1) 62.81%,
+					rgba(18, 11, 50, 1) 100%);
+			animation: loaded 2s linear infinite;
+		}
+
+		@keyframes loaded {
+			0% {
+				left: 0%;
+				right: 100%;
+				width: 0%;
+			}
+
+			10% {
+				left: 0%;
+				right: 75%;
+				width: 25%;
+			}
+
+			90% {
+				right: 0%;
+				left: 75%;
+				width: 25%;
+			}
+
+			100% {
+				left: 100%;
+				right: 0%;
+				width: 0%;
+			}
+		}
+	</style>
 	<title>Boosteroid Cloud Gaming | Your Games on Any Device 🚀</title>
 </head>
 
 <body>
+	<div class="mask">
+		<div class="mask__loader"></div>
+	</div>
 	<header class="header">
 		<nav id="navigation" class="header__nav">
 			<div class="header__navbar">
@@ -22,19 +91,24 @@
 					</a>
 					<ul class="header__list">
 						<li class="header__item">
-							<a href="#" class="header__item-link header__item-link--md i18nelement">downloads</a>
-							<a href="#" class="header__item-link header__item-link--sm i18nelement">our app</a>
+							<a href="https://boosteroid.com/games/" class="header__item-link ">games</a>
 						</li>
 						<li class="header__item">
-							<a href="#" class="header__item-link i18nelement">faq</a>
+							<a href="https://boosteroid.com/downloads/" class="header__item-link ">our apps</a>
 						</li>
 						<li class="header__item">
-							<a href="https://help.boosteroid.com/en/" class="header__item-link header__item-link--help i18nelement"
-								target="_blank">Help center</a>
-						</li>
-						<li class="header__item">
-							<a href="https://boosteroid.com/blog/" class="header__item-link header__item-link--blog i18nelement"
+							<a href="https://boosteroid.com/blog/" class="header__item-link header__item-link--blog "
 								target="_blank">Blog</a>
+						</li>
+						<li class="header__item">
+							<a href="https://boosteroid.com/faq/" class="header__item-link ">faq</a>
+						</li>
+						<li class="header__item">
+							<a href="https://boosteroid.com/partner-page/" class="header__item-link ">partnership</a>
+						</li>
+						<li class="header__item">
+							<a href="https://help.boosteroid.com/en/" class="header__item-link header__item-link--help "
+								target="_blank">Help center</a>
 						</li>
 					</ul>
 
@@ -241,6 +315,97 @@
 			</div>
 		</section>
 
+		<section class="faq">
+			<div class="container">
+				<h2 class="faq__title subtitle">FAQ</h2>
+
+				<div class="faq__box">
+					<!-- 1 -->
+					<div class="faq__inner">
+						<h4 class="faq__inner-title">
+							How do I claim my free month of PC Game Pass?
+							<svg class="faq__inner-title-icon">
+								<use href="#plus"></use>
+							</svg>
+						</h4>
+						<div class="faq__inner-list">
+							<p>Just have an active Boosteroid subscription between November 14th and December 5th, 2025. Generate your
+								unique code on <a href="#">this page</a>. Redeem your code by January 4th, 2025 to unlock your free
+								month of PC Game Pass.
+							</p>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="faq__inner">
+						<h4 class="faq__inner-title">
+							Who is eligible for this offer?
+							<svg class="faq__inner-title-icon">
+								<use href="#plus"></use>
+							</svg>
+						</h4>
+						<div class="faq__inner-list">
+							<p>This offer is available to all new and existing Boosteroid subscribers who sign up or renew their
+								subscription between November 14th - December 5th.
+							</p>
+						</div>
+					</div>
+					<!-- 3 -->
+					<div class="faq__inner">
+						<h4 class="faq__inner-title">
+							Can I use this offer if I already have an active Xbox Game Pass subscription?
+							<svg class="faq__inner-title-icon">
+								<use href="#plus"></use>
+							</svg>
+						</h4>
+						<div class="faq__inner-list">
+							<p>If you already have an active Xbox Game Pass subscription, you won't be able to redeem this code.
+							</p>
+						</div>
+					</div>
+					<!-- 4 -->
+					<div class="faq__inner">
+						<h4 class="faq__inner-title">
+							Is there a limit to how many times I can use this offer?
+							<svg class="faq__inner-title-icon">
+								<use href="#plus"></use>
+							</svg>
+						</h4>
+						<div class="faq__inner-list">
+							<p>This offer can be redeemed only once per Boosteroid user.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- 5 -->
+				<div class="faq__inner">
+					<h4 class="faq__inner-title">
+						What happens after my free month of PC Game Pass ends?
+						<svg class="faq__inner-title-icon">
+							<use href="#plus"></use>
+						</svg>
+					</h4>
+					<div class="faq__inner-list">
+						<p> After the free month, your PC Game Pass subscription will automatically renew at the standard monthly
+							price unless you cancel it.
+						</p>
+					</div>
+				</div>
+				<!-- 6 -->
+				<div class="faq__inner">
+					<h4 class="faq__inner-title">
+						What if I have trouble redeeming my code?
+						<svg class="faq__inner-title-icon">
+							<use href="#plus"></use>
+						</svg>
+					</h4>
+					<div class="faq__inner-list">
+						<p>If you encounter any issues, please contact Boosteroid customer support for assistance.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="code">
 			<div class="container">
 				<div class="code__box boost__box">
@@ -281,22 +446,20 @@
 		</section>
 	</main>
 
-	<footer class="footer" data-scroll-section>
+	<footer class="footer">
 		<div class="container">
 			<div class="footer__box">
 				<div class="footer__inner">
-					<h5 class="footer__title i18nelement" data-i18n="footer.support">Support</h5>
+					<h5 class="footer__title">Support</h5>
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="faq/" class="footer__item-link">FAQ</a>
+							<a href="https://boosteroid.com/faq/" class="footer__item-link">FAQ</a>
 						</li>
 						<li class="footer__item">
-							<a href="https://help.boosteroid.com/en/" class="footer__item-link i18nelement" data-i18n="footer.help"
-								target="_blank">Help Center</a>
+							<a href="https://help.boosteroid.com/en/" class="footer__item-link" target="_blank">Help Center</a>
 						</li>
 						<li class="footer__item">
-							<a href="https://boosteroid.com/blog/" class="footer__item-link i18nelement" data-i18n="footer.blog"
-								target="_blank">Blog</a>
+							<a href="https://boosteroid.com/blog/" class="footer__item-link " target="_blank">Blog</a>
 						</li>
 						<li class="footer__item">
 							<a href="mailto:support@boosteroid.com" class="footer__item-link">support@boosteroid.com</a>
@@ -304,39 +467,38 @@
 					</ul>
 				</div>
 				<div class="footer__inner">
-					<h5 class="footer__title i18nelement" data-i18n="footer.legal">LEGAL </h5>
+					<h5 class="footer__title ">LEGAL </h5>
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="https://boosteroid.com/terms" target="_blank" class="footer__item-link i18nelement"
-								data-i18n="footer.terms">Terms and Conditions</a>
+							<a href="https://boosteroid.com/terms" target="_blank" class="footer__item-link ">Terms and Conditions</a>
 						</li>
 						<li class="footer__item">
-							<a href="https://boosteroid.com/privacy" target="_blank" class="footer__item-link i18nelement"
-								data-i18n="footer.policy">Privacy Policy</a>
+							<a href="https://boosteroid.com/privacy" target="_blank" class="footer__item-link ">Privacy Policy</a>
 						</li>
 						<li class="footer__item">
-							<a href="https://boosteroid.com/cookie" target="_blank" class="footer__item-link i18nelement"
-								data-i18n="footer.cookie">Cookie Policy</a>
+							<a href="https://boosteroid.com/account-data/" class="footer__item-link">Account data</a>
 						</li>
 						<li class="footer__item">
-							<a href="mailto:cooperation@boosteroid.com" class="footer__item-link">cooperation@boosteroid.com</a>
+							<a href="https://boosteroid.com/cookie" target="_blank" class="footer__item-link ">Cookie Policy</a>
 						</li>
 					</ul>
 				</div>
 				<div class="footer__inner">
-					<h5 class="footer__title i18nelement" data-i18n="footer.partner">For partners</h5>
+					<h5 class="footer__title ">For partners</h5>
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="partner-page/" class="footer__item-link i18nelement" data-i18n="footer.partner_content">Content
+							<a href="https://boosteroid.com/partner-page/" class="footer__item-link ">Content
 								creators</a>
 						</li>
-						<!-- <li class="footer__item">
-							<a href="#" class="footer__item-link">Technology</a>
+						<li class="footer__item">
+							<a href="mailto:cooperation@boosteroid.com" class="footer__item-link">Cooperate with us</a>
+						</li>
+						<a href="#" class="footer__item-link">Technology</a>
 						</li> -->
 					</ul>
 				</div>
 				<div class="footer__inner">
-					<h5 class="footer__follow i18nelement" data-i18n="footer.follow">Follow us</h5>
+					<h5 class="footer__follow ">Follow us</h5>
 					<ul class="footer__social">
 						<li class="footer__icon">
 							<a href="https://www.instagram.com/boosteroid" target="_blank" class="footer__icon-link"
@@ -398,20 +560,14 @@
 								</svg>
 							</a>
 						</li>
-						<!-- <li class="footer__icon">
-							<a href="#" class="footer__icon-link">
-								<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M17.2417 0.639648C7.85303 0.639648 0.241699 8.25098 0.241699 17.6396C0.241699 27.0283 7.85303 34.6396 17.2417 34.6396C26.6303 34.6396 34.2417 27.0283 34.2417 17.6396C34.2417 8.25098 26.6303 0.639648 17.2417 0.639648ZM18.8057 22.7875C17.5493 22.7875 16.367 22.0936 15.9605 21.3054C15.9605 21.3054 15.2851 24.044 15.1414 24.5725C14.9003 25.4658 14.4351 26.3576 14.0039 27.0639C13.3889 27.8675 12.6795 27.271 12.5945 26.5384C12.5667 25.7224 12.596 24.7565 12.7985 23.8771C13.0226 22.9128 14.296 17.4001 14.296 17.4001C14.296 17.4001 13.9236 16.6413 13.9236 15.5193C13.9236 13.7575 14.9235 12.4423 16.1691 12.4423C17.2278 12.4423 17.7393 13.2553 17.7393 14.2273C17.7393 15.3138 17.0609 16.9396 16.7116 18.4449C16.4195 19.706 17.3313 20.7337 18.5491 20.7337C20.7545 20.7337 22.2413 17.8406 22.2413 14.4143C22.2413 11.8087 20.5226 9.85987 17.3963 9.85987C13.8649 9.85987 11.6641 12.5489 11.6641 15.5518C11.6641 16.5872 11.9624 17.3182 12.4323 17.8823C12.6471 18.142 12.678 18.247 12.5991 18.5454C12.5435 18.7648 12.4153 19.2903 12.3627 19.4989C12.2854 19.8003 12.0459 19.9069 11.78 19.7956C10.1527 19.1171 9.39542 17.2981 9.39542 15.2551C9.39542 11.8783 12.185 7.82915 17.7161 7.82915C22.1609 7.82915 25.0864 11.1133 25.0864 14.6384C25.0879 19.3041 22.5488 22.7875 18.8057 22.7875Z" fill="white"/>
-								</svg>
-							</a>
-						</li> -->
-						<!-- <li class="footer__icon">
-							<a href="https://www.youtube.com/channel/UCeTZdm8fL5yIRCSOmHp4dxQ" target="_blank" class="footer__icon-link">
-								<svg width="35" height="35" viewBox="0 0 35 35"  xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.1242 20.8246L20.6541 17.6396L15.1242 14.4547V20.8246Z" />
-									<path d="M17.2417 0.639648C7.85429 0.639648 0.241699 8.25224 0.241699 17.6396C0.241699 27.0271 7.85429 34.6396 17.2417 34.6396C26.6291 34.6396 34.2417 27.0271 34.2417 17.6396C34.2417 8.25224 26.6291 0.639648 17.2417 0.639648ZM27.8641 17.657C27.8641 17.657 27.8641 21.1047 27.4268 22.7672C27.1816 23.6772 26.4641 24.3947 25.5542 24.6395C23.8917 25.0771 17.2417 25.0771 17.2417 25.0771C17.2417 25.0771 10.6091 25.0771 8.92924 24.6222C8.01927 24.3773 7.30177 23.6595 7.05664 22.7496C6.61903 21.1047 6.61903 17.6396 6.61903 17.6396C6.61903 17.6396 6.61903 14.1922 7.05664 12.5297C7.30151 11.6198 8.03665 10.8846 8.92924 10.6398C10.5917 10.2021 17.2417 10.2021 17.2417 10.2021C17.2417 10.2021 23.8917 10.2021 25.5542 10.6571C26.4641 10.902 27.1816 11.6198 27.4268 12.5297C27.8817 14.1922 27.8641 17.657 27.8641 17.657Z" />
-								</svg>
-							</a>
+						<a href="https://www.youtube.com/channel/UCeTZdm8fL5yIRCSOmHp4dxQ" target="_blank"
+							class="footer__icon-link">
+							<svg width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.1242 20.8246L20.6541 17.6396L15.1242 14.4547V20.8246Z" />
+								<path
+									d="M17.2417 0.639648C7.85429 0.639648 0.241699 8.25224 0.241699 17.6396C0.241699 27.0271 7.85429 34.6396 17.2417 34.6396C26.6291 34.6396 34.2417 27.0271 34.2417 17.6396C34.2417 8.25224 26.6291 0.639648 17.2417 0.639648ZM27.8641 17.657C27.8641 17.657 27.8641 21.1047 27.4268 22.7672C27.1816 23.6772 26.4641 24.3947 25.5542 24.6395C23.8917 25.0771 17.2417 25.0771 17.2417 25.0771C17.2417 25.0771 10.6091 25.0771 8.92924 24.6222C8.01927 24.3773 7.30177 23.6595 7.05664 22.7496C6.61903 21.1047 6.61903 17.6396 6.61903 17.6396C6.61903 17.6396 6.61903 14.1922 7.05664 12.5297C7.30151 11.6198 8.03665 10.8846 8.92924 10.6398C10.5917 10.2021 17.2417 10.2021 17.2417 10.2021C17.2417 10.2021 23.8917 10.2021 25.5542 10.6571C26.4641 10.902 27.1816 11.6198 27.4268 12.5297C27.8817 14.1922 27.8641 17.657 27.8641 17.657Z" />
+							</svg>
+						</a>
 						</li> -->
 						<li class="footer__icon">
 							<a href="https://t.me/boosteroid" target="_blank" class="footer__icon-link"
@@ -434,7 +590,7 @@
 					</ul>
 					<div class="footer__reserved">
 						<span class="footer__reserved--year">Boosteroid Inc. 2024. All rights reserved.
-						</span> <span class="i18nelement" data-i18n="footer.reserved">5900 Balcones Drive, STE 100, Austin TX
+						</span> <span>5900 Balcones Drive, STE 100, Austin TX
 							78731</span>
 					</div>
 				</div>
@@ -443,6 +599,12 @@
 	</footer>
 
 	<svg class="hidden" xmlns="http://www.w3.org/2000/svg">
+		<!-- plus -->
+		<symbol viewBox="0 0 10 11" fill="none" id="plus">
+			<path
+				d="M5 0.64917C4.36282 0.64917 3.8461 1.16575 3.8461 1.80307V4.49527H1.1539C0.51658 4.49527 0 5.01185 0 5.64917C0 6.28635 0.51658 6.80307 1.1539 6.80307H3.8461V9.49527C3.8461 10.1326 4.36268 10.6492 5 10.6492C5.63732 10.6492 6.1539 10.1326 6.1539 9.49527V6.80307H8.8461C9.48342 6.80307 10 6.28649 10 5.64917C10 5.01185 9.48342 4.49527 8.8461 4.49527H6.1539V1.80307C6.1539 1.16575 5.63732 0.64917 5 0.64917Z"
+				fill="#9BF00B" />
+		</symbol>
 		<!-- game_icon_one -->
 		<symbol viewBox="0 0 40 40" fill="none" id="game_icon_one">
 			<path

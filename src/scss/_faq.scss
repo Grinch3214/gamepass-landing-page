@@ -1,0 +1,135 @@
+.faq {
+  padding: 50px 0;
+  @media (min-width: $breakpoint768) {
+    padding: 70px 0;
+  }
+  @media (min-width: $breakpoint1310) {
+    padding: 190px 0 80px;
+  }
+  @media (min-width: $breakpoint1920) {
+    padding: 115px 0;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+    @media (min-width: $breakpoint768) {
+      margin-bottom: 40px;
+    }
+    @media (min-width: $breakpoint1310) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__box {
+  }
+
+  &__inner {
+    margin: 0 -20px;
+    padding: 0 20px;
+    background: linear-gradient(rgba(11, 0, 41, 0) 40%, #180153);
+    @media (min-width: $breakpoint768) {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__inner-title {
+    color: $white-color;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 14px;
+    position: relative;
+    margin: 0 -20px;
+    padding: 10px 20px;
+    padding-right: 40px;
+    background: $backgroundPrimary;
+    cursor: pointer;
+
+    @media (min-width: $breakpoint768) {
+      font-size: 12px;
+      margin: 0;
+      padding: 10px 0;
+    }
+    @media (min-width: $breakpoint1310) {
+      font-size: 18px;
+      line-height: 30px;
+      padding: 15px 0;
+    }
+    @media (min-width: $breakpoint1920) {
+      font-size: 20px;
+      padding: 30px 0;
+    }
+
+    &.active {
+      color: $brand-color;
+    }
+
+    &.active .faq__inner-title-icon {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__inner-title-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    transition: 0.2s ease-out;
+    @media (min-width: $breakpoint768) {
+      right: 10px;
+    }
+    @media (min-width: $breakpoint1310) {
+      width: 20px;
+      height: 20px;
+      right: 20px;
+    }
+    @media (min-width: $breakpoint1920) {
+      top: 30px;
+    }
+  }
+
+  &__inner-list {
+    font-size: 10px;
+    line-height: 14px;
+    font-family: Roboto;
+    color: $sub-color;
+
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    @media (min-width: $breakpoint768) {
+      font-size: 14px;
+      line-height: 18px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: $breakpoint1310) {
+      font-size: 18px;
+      line-height: 24px;
+      padding-left: 50px;
+      padding-right: 120px;
+    }
+
+    @media (min-width: $breakpoint1920) {
+      font-size: 24px;
+      line-height: 36px;
+      padding-left: 30px;
+    }
+
+    p {
+      padding: 20px 0;
+      @media (min-width: $breakpoint1310) {
+        padding: 27px 0;
+      }
+    }
+
+    a {
+      color: $link-color;
+    }
+  }
+}

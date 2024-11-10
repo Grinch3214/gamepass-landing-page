@@ -1,5 +1,4 @@
 .footer {
-  padding-top: 36px;
   padding-bottom: 24px;
   background: linear-gradient(
     90deg,
@@ -187,6 +186,7 @@
   }
 
   &__reserved {
+    display: grid;
     color: #9b99ad;
     font-size: 12px;
     text-align: center;

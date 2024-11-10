@@ -34,7 +34,8 @@ main {
 }
 
 .top-section {
-  background: url("/src/img/header_bg.svg") no-repeat top/100% auto;
+  background: url("/src/img/header_bg.svg") no-repeat top/100% auto,
+    linear-gradient(rgba(11, 0, 41, 0) 40%, #180153);
   @media (min-width: $breakpoint768) {
     background-size: 100% 110%;
     background-position: 100% 100%;
