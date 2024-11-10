@@ -1,0 +1,21 @@
+.code {
+  padding: 70px 0 50px;
+  background: url("../img/webp/images_group.webp") no-repeat top/100% auto,
+    url("../img/star_bottom.svg") no-repeat bottom/100% auto,
+    linear-gradient(rgba(11, 0, 41, 0) 50%, rgba(24, 1, 83, 0.5));
+
+  @media (min-width: $breakpoint768) {
+    padding: 180px 0;
+  }
+
+  @media (min-width: $breakpoint1310) {
+    padding: 120px 0 60px;
+  }
+
+  @media (min-width: $breakpoint1920) {
+    padding: 225px 0 105px;
+  }
+
+  &__box {
+  }
+}
