@@ -35,10 +35,10 @@
 
   &__inner-title {
     color: $white-color;
-    font-size: 10px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 800;
-    line-height: 14px;
+    line-height: 18px;
     position: relative;
     margin: 0 -20px;
     padding: 10px 20px;
@@ -47,7 +47,7 @@
     cursor: pointer;
 
     @media (min-width: $breakpoint768) {
-      font-size: 12px;
+      font-size: 16px;
       margin: 0;
       padding: 10px 0;
     }
@@ -72,7 +72,7 @@
 
   &__inner-title-icon {
     position: absolute;
-    top: 10px;
+    top: 13px;
     right: 20px;
     width: 10px;
     height: 10px;
@@ -91,8 +91,8 @@
   }
 
   &__inner-list {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 18px;
     font-family: Roboto;
     color: $sub-color;
 
